@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false">
+
+    <RelativeLayout
+        android:elevation="5dp"
+        android:id="@+id/note"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:fontFamily="sans-serif-thin"
+            android:textSize="@dimen/text_size_large"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:text="Hello! Let's start by getting some basic information from you. "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:clipToPadding="false"
+        android:layout_below="@+id/note"
+        android:background="@drawable/white_background_round"
+        android:elevation="5dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="@drawable/white_background_round"
+            android:elevation="10dp"
+            android:hint="Your weight (lbs)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:weightSum="5"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/exercise"
+                android:inputType="number"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="3"
+                android:padding="10dp"
+                android:elevation="10dp"
+                android:background="@drawable/white_background_round"
+                android:hint="Amount of exercise"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/time"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="2"
+                android:entries="@array/time_array"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/white_background_round"
+            android:text="Enter in the length of exercise you do a day. You can leave it empty, because you'll be able to change this later. "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background_blue"
+            android:text="Next"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

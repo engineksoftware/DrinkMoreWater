@@ -11,7 +11,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //TODO: Change this so it only runs on the first start.
         Intent intent = new Intent(this, SetupActivity.class);
         startActivity(intent);
+        finish();
     }
 }
